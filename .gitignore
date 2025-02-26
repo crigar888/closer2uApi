@@ -1,0 +1,46 @@
+# Node modules
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Compiled files
+/dist
+/build
+/.turbo
+
+# TypeScript
+*.tsbuildinfo
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# IDE files
+.vscode/
+.idea/
+
+# MacOS specific
+*.swp
+
+# npm package lock files (optional)
+package-lock.json
+yarn.lock
+
+# TypeScript & TSC
+*.tsbuildinfo
+tsconfig.tsbuildinfo
+
+# Jest
+coverage/
