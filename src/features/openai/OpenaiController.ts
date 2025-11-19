@@ -10,12 +10,16 @@ router.post('/new', async (req: Request, res: Response): Promise<any> => {
       return res.status(400).json({ error: 'message is missing.' });
     }
     try {
-      const response = await OpenaiService.newMessage(userMessage);
+      const response = '';
       return res.json({ response });
     } catch (error) {
       console.error('error doing openAI request', error);
       return res.status(500).json({ error: 'error in the request' });
     }
+  });
+
+router.get('/new', async (req: Request, res: Response): Promise<any> => {
+    console.log('incoming message:  hola');
   });
 
 export default router;

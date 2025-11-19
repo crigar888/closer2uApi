@@ -36,4 +36,27 @@ router.post("/incoming", upload.single('Media'), async (req: Request, res: Respo
   }
 });
 
+router.post("/", async (req: Request, res: Response) => {
+  try {
+    console.log('incoming message:  sdf');
+
+    const dialogflowResponse = {
+        fulfillmentResponse: {
+            messages: [
+                {
+                    text: {
+                        text: ['test from api'] // The message to be spoken/displayed to the user
+                    }
+                }
+            ]
+        }
+    };
+    
+    res.json(dialogflowResponse);     
+  } catch (error) {
+    console.error('[Error][incoming message]', error);
+    res.status(500).json({ error: 'error processing message' });
+  }
+});
+
 export default router;

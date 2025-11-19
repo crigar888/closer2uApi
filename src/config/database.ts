@@ -17,6 +17,14 @@ class Database {
       console.error('[ERROR] Database disconnected!', error);
     }
   }
+
+  public get connection() {
+    return mongoose.connection;
+  }
+
+  public get db() {
+    return mongoose.connection.db;
+  }
 }
 
 export default new Database();

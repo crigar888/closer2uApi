@@ -44,3 +44,7 @@ tsconfig.tsbuildinfo
 
 # Jest
 coverage/
+
+# Google Cloud Credentials
+closer2u-91f5c09b96e6.json
+
